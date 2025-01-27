@@ -2,3 +2,6 @@ ACESSIBILITY and SEO
 - Headers
 - Image descriptions - ALT attribute
 - Title ???
+
+
+- Table - <caption> explains what your table stands for
