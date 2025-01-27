@@ -1,0 +1,19 @@
+/*
+Learning Activity 1.1.1: Let’s Build Our First “Hello World” HTML Page
+
+Learning Objective
+Explain HTML basics
+
+Directions
+It is important to understand that you can create a website with just HTML pages! Let’s build our first “Hello World” HTML page with the title as “Tech-1101”.
+
+Stretch activities:
+Can you change the heading size to be smaller?
+Can you add a paragraph of text?
+Can you add line breaks between your paragraphs?
+*/
+
+/*Can you change the heading size to be smaller?*/
+h1 {
+    font-size: 20px;
+}

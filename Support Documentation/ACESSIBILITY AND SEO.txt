@@ -1,0 +1,4 @@
+ACESSIBILITY and SEO
+- Headers
+- Image descriptions - ALT attribute
+- Title ???
