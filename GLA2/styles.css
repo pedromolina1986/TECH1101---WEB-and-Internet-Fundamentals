@@ -1,0 +1,82 @@
+/*
+Student name: Pedro Molina
+Student ID: 46777
+GLA2
+
+
+Hide Folder Information
+Instructions
+Create a design layout that is consistent proportional to window size
+The image below shows the full-screen presentation of the layout.
+
+The image below shows what happens when the screen’s width and height are adjusted in sync (width = height).
+
+The image below shows what happens when the screen’s width increases more than its height (width > height).
+
+The image below shows what happens when the screen’s height increases more than its width (height > width).
+
+Overview
+A CSS box model design layout is shown above. To construct the layout seen above, apply the relevant HTML elements and CSS attributes (using an external CSS file).
+ You are provided with the HTML code. Your goal is to utilize a CSS stylesheet and style the HTML elements in a way that matches the aforementioned layout requirements.
+
+Directions
+1 - The HTML code is provided and can be used right away. - OK
+2 - There is no need to change this file except to write your name in Square 3. - OK
+3 - Do not use JavaScript code in this activity. - OK
+4 - Create an external CSS stylesheet to style the HTML elements according to the following requirements. - OK
+5 - All 3 elements should be square-shaped (width = height) at all times, regardless of the changes in window size - OK.
+6 - The width of Square 2’s boundary should be double that of Square 1’s boundary. - OK
+7 - The width of Square 3's boundary should be four times that of Square 1's boundary. - OK
+8 - The corners of the square boxes should always meet. - OK
+9 - Style the elements to match the four images described above. - BORDER?
+10 - Full-screen layout
+    Screen width = screen height
+    Screen width > screen height
+    Screen width < screen height
+11 - You may estimate the color, padding, and border values.
+12 - This activity will be graded for both design and functionality.
+*/
+
+/*set border recognition inside the viewport and remove all margins of the pages*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*
+    variables defining the sizes of the boxes as directions is asking for
+    Used the following formula to define sizes:
+    1x + 2x + 4x = 100
+    7x = 100
+    x = 100/7
+    x = 14.29
+*/
+:root {
+    --sq1size: calc(14.29vh); 
+    --sq2size: calc(14.29vh * 2); 
+    --sq3size: calc(14.29vh * 4);
+}
+
+/* set squares colors, borders, size and margins */
+#square1 {
+    background-color: lightcoral;
+    border: 3px solid black;
+    height: var(--sq1size);
+    width: var(--sq1size);
+}
+
+#square2 {
+    background-color: lightgreen;
+    border: 6px solid lightcoral;
+    height: var(--sq2size);
+    width: var(--sq2size);
+    margin-left: var(--sq1size);
+}
+
+#square3 {
+    background-color: lightskyblue;
+    border: 9px solid purple;
+    height: var(--sq3size);
+    width: var(--sq3size);   
+    margin-left: calc(var(--sq1size) + var(--sq2size));
+}
