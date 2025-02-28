@@ -59,11 +59,11 @@ html, body {
 
 @media (max-width: 580px) {
     .menu {    
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;        
-        cursor: pointer;
+        cursor: pointer;        
     }
 }
 
