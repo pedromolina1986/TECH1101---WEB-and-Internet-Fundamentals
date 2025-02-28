@@ -1,3 +1,12 @@
+<!--
+
+
+
+references:
+Logos: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +14,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_logo.css">
+    <link rel="icon" type="image/x-icon" href="images/Profile.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pedro Molina</title>
 </head>
 
@@ -29,11 +41,12 @@
         <div class="intro">
             <div class="introText">
                 <p class="introTextRegular">HELLO, MY NAME IS</p>
-                <P class="introTextName">PEDRO MOLINA</P>
+                <h1 class="introTextName">PEDRO MOLINA</h1>
                 <p class="introTextRegular">
                     A passionate Software Engineer driven by a commitment to innovation and technical excellence.
                     With a strong background in software development, product management, and technology leadership, I
-                    thrive on leading cross-functional teams to deliver cutting-edge solutions that solve complex challenges
+                    thrive on leading cross-functional teams to deliver cutting-edge solutions that solve complex
+                    challenges
                     and drive business success.
                 </p>
             </div>
@@ -43,20 +56,67 @@
         </div>
 
         <!--ABOUT-->
-        <div class="about">        
-            <div>
-                <span>Professional</span>
+        <div class="about">
+            <div class="aboutCard">
+                <div class="aboutCardTitle">
+                    <h2
+                        onclick=onclick=window.location.assign("https://www.linkedin.com/in/pedro-molina-pono/details/experience/");>
+                        Professional</h2>
+                </div>
+                <div class="aboutCardContent">
+                    <img src="images/oncrets.png" onclick=window.location.assign("https://oncrets.com/en/home-en/");>
+                    <img src="images/ideris_lab_cover.jpeg"
+                        onclick=window.location.assign("https://www.ideris.com.br/");>
+                    <img src="images/golive.png"
+                        onclick=window.location.assign("https://www.goliveconsultoria.com.br/");>
+                    <img src="images/totvs.png" onclick=window.location.assign("https://www.totvs.com/");>
+                    <img src="images/pono_banner.png"
+                        onclick=window.location.assign("https://www.ponotecnologia.com.br/");>
+                </div>
             </div>
-            <div>
-                <span>Academic</span>
+            <div class="aboutCard">
+                <div class="aboutCardTitle">
+                    <h2
+                        onclick=onclick=window.location.assign("https://www.linkedin.com/in/pedro-molina-pono/details/education/");>
+                        Academic</h2>
+                </div>
+                <div class="aboutCardContent">
+                    <div>
+                        <img src="images/bow_valley.png"
+                            onclick=onclick=window.location.assign("https://bowvalleycollege.ca/programs-courses/technology/software-development-diploma#course-listings");>                     
+                            <span>Bow Valley College</span>
+                            <span>Software Development</span>
+                            <span>Jan 2025 - Dec 2026</span>                                               
+                    </div>
+
+                    <div>
+                        <img src="images/UFPR.png"
+                            onclick=onclick=window.location.assign("https://web.inf.ufpr.br/bcc/");></td>                    
+                        <span>Universiade Federal do Paraná</span>
+                        <span>BSc - Computer Science</span>
+                        <span>Jan 2005 - Dec 2008</span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span>Stack</span>
-            </div>    
-          
+            <div class="aboutCard">
+                <h2>Stack</h2>
+            </div>
         </div>
+
+        <!--FOOTER-->
         <div class="footer">
-            <span>Copyright 2025</span>
+            <div class="footerSocialMedias">
+                <a href="https://www.facebook.com/pedro.molina.353803" class="fa fa-facebook"></a>                
+                <a href="https://www.google.com/search?q=pedro+henrique+kuckak+molina&sca_esv=23cc6f897c9df544&sxsrf=AHTn8zqP12f1NuzNXk5Px9Lslo3gcX3gIg%3A1740778603880&source=hp&ei=ayzCZ4niMuX00PEP44arqQs&iflsig=ACkRmUkAAAAAZ8I6e-krzznyHID6VfVb5BjnE6oPu0z-&oq=pedro&gs_lp=Egdnd3Mtd2l6IgVwZWRybyoCCAAyBBAjGCcyBBAjGCcyCBAuGIAEGLEDMggQABiABBixAzILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMggQABiABBixAzIIEC4YgAQYsQMyCBAAGIAEGLEDMggQLhiABBixA0i4DlCKBFjFB3ABeACQAQCYAVKgAfECqgEBNbgBA8gBAPgBAZgCBqAClQOoAgrCAgcQIxgnGOoCwgIKECMYgAQYJxiKBcICCxAuGIAEGNEDGMcBwgIOEC4YgAQYsQMY0QMYxwHCAg4QLhiABBixAxiDARiKBcICBRAAGIAEwgIREC4YgAQYsQMY0QMYgwEYxwHCAgsQABiABBixAxjJA8ICCxAAGIAEGJIDGIoFmAML8QUVYEw7jYPSqJIHATagB5hG&sclient=gws-wiz" class="fa fa-google"></a>
+                <a href="https://www.linkedin.com/in/pedro-molina-pono/" class="fa fa-linkedin"></a>                
+                <a href="https://www.instagram.com/pedro.kuchak/" class="fa fa-instagram"></a>
+                <a href="https://www.instagram.com/pedro.kuchak/" class="fa fa-github"></a>
+                
+            </div>            
+            <div class="footerCopyright">
+                <span>Copyright 2025</span> 
+            </div>
+                       
         </div>
     </div>
 

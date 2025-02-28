@@ -11,7 +11,7 @@
     --fontMenu: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-* {
+html, body {
     background-color: var(--backgroundPrimary);
     box-sizing: border-box;    
     font-family: var(--fontMenu); 
@@ -23,8 +23,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;        
+    align-items: center;         
+    height: 100vh;
 }
+
 
 /*PAGE HEADER*/
 .header {
@@ -34,7 +36,7 @@
     justify-content: space-between;    
     font-size: 13px;   
     padding-top: 1vh;   
-    height: 5vh;  
+    height: 5vh;      
 }
 
 .header * {
@@ -69,6 +71,10 @@
     color: var(--primaryColor);    
     padding-right: 15px;
     padding-top: 5px;
+}
+
+.menu span a:active {
+    
 }
 
 .menu span:hover {
@@ -142,7 +148,6 @@
     flex-basis: auto;    
     padding-top: 10px;            
     width: 100%;
-    height: 100%;
     min-height: 30vh;
 }
 
@@ -164,23 +169,133 @@
     
 }
 
-.about > div {
-
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--primaryColor);
+.about > div {    
+    box-shadow: 5px 5px 5px 5px var(--secondaryColor);    
     text-align: center;
     border-radius: 10px;          
     min-height: 200px;    
     min-width: 30vw;
+    margin: 20px;
 }
+
+.aboutCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.aboutCardTitle {
+    cursor: pointer; 
+}
+
+.aboutCardTitle:hover {    
+    color: var(--thirdColor);
+}
+
+/*ABOUT - Professional*/
+.aboutCard:first-child > .aboutCardContent > img {
+    width: 100%;
+    height: 100px;  
+    border-radius: 10px;         
+}
+
+.aboutCard:first-child > .aboutCardContent > img {
+    width: 100%;
+    height: 100px;  
+    border-radius: 10px;         
+}
+
+.aboutCard:first-child > .aboutCardContent > img:hover {    
+    border-radius: 20px;
+}
+
+/*ABOUT - ACADEMIC*/
+.aboutCard:nth-child(2) > .aboutCardContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: left;    
+    flex-grow: 1;       
+    width: 100%;      
+}
+
+/*academic history item*/
+.aboutCard:nth-child(2) > .aboutCardContent > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;      
+    margin: 10px;      
+    padding: 10px;                  
+}
+
+.aboutCard:nth-child(2) > .aboutCardContent > div:hover {
+    box-shadow: 5px 5px 5px 5px var(--secondaryColor); 
+}
+
+
+/*academic history item image*/
+.aboutCard:nth-child(2) > .aboutCardContent > div > img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;     
+    height: 60%;     
+}
+
+/*academic history item description*/
+.aboutCard:nth-child(2) > .aboutCardContent > div > span {
+    color: var(--primaryColor);
+    font-size: small;
+}
+
+/*academic history item description*/
+.aboutCard:nth-child(2) > .aboutCardContent > div > span:nth-child(3) {
+    color: var(--thirdColor);
+    font-size: small;
+}
+
+.aboutCard:nth-child(2) > .aboutCardContent > div > span:nth-child(4) {
+    color: var(--thirdColor);
+    font-size: small;
+}
+
 
 /*FOOTER*/
 .footer{
-    font-size: 10px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: var(--backgroundPrimary);
+}
+
+.footerSocialMedias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSocialMedias > a {
+    background: none;
+    color: var(--secondaryColor);
+}
+
+.footerSocialMedias > a:hover {
+    
+    color: var(--primaryColor);
+}
+
+.footerCopyright {
     text-align: center;
+    font-size: small;
+    color: var(--secondaryColor);
 }
 
 
