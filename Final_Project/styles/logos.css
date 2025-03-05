@@ -117,3 +117,11 @@
     background: #ff6600;
     color: white;
   }
+
+  .bars div {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 4px 10px;
+  }
+  
