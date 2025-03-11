@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text and Style Example</title>
+
+    <!-- Link to external script -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Change Text and Style Example</h1>
+
+    <div align="center">
+        <p id="paragraphElement">This is the text that needs to be changed!</p>
+    </div>
+
+    <hr>
+    <p>Clicking this button should change the above paragraph to display "Hello World".</p>
+    <button onclick="changeTextButton()">Change Text to "Hello World"</button>
+    <br><br>
+
+    <hr>
+    <p>Clicking this button should change the above paragraph's color to be red.</p>
+    <button onclick="changeStyleButton()">Change Color to Red</button>
+    <br><br>
+
+    <hr>
+    <p>Clicking this button should make the above paragraph be invisible.</p>
+    <button onclick="hideDisplayButton()">Make the Paragraph Invisible</button>
+    <br><br>
+
+    <hr>
+    <p>Clicking this button should make the above paragraph be visible.</p>
+    <button onclick="showDisplayButton()">Make the Paragraph Visible</button>
+    <br><br>
+
+    <hr>
+    <h2>Stretch activity:</h2>
+    <p>Clicking this button should change the above paragraph to display whatever value is in the textbox, and then clear the textbox.</p>
+    <!--
+        Inserted the event listener on keypress in input and onclick in button
+    -->
+    <input type="text" id="userInput" onkeypress="updateParagraphTextOnEnterOnInput(event)">
+    <button onclick="updateParagraphText()">Update Text</button>
+</body>
+</html>

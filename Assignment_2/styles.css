@@ -1,0 +1,290 @@
+/*
+TECH1101 - Web and Internet Fundamentals
+Instructor: Michael Dorsey
+
+Student ID: 467777
+Studen Name: Pedro Kuchak Molina
+
+References:
+
+gray color: https://www.canva.com/colors/color-wheel/
+li: https://www.w3schools.com/howto/howto_css_list_without_bullets.asp
+centered and colored header on lyrics: https://stackoverflow.com/questions/14310154/how-do-i-set-a-background-color-for-the-width-of-text-not-the-width-of-the-enti
+*/
+
+/* Global variables*/
+:root {
+    /*colors*/
+    --yellow: yellow;
+    --gray: #3e3e3e;    
+
+    /*fonts*/
+    --font: Arial, Helvetica, sans-serif;    
+}
+
+/* Body style */
+body {
+    /*direction of the body to fit all elements one under another*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;        
+
+    /*to give centralized view in a wider screen it is unseted in smaller viewport*/
+    width: 70%; 
+    height: 100%;
+    margin: auto;    
+
+    /*body font*/
+    font-family: var(--font);     
+}
+
+/*Header 2 style used multiple times*/
+body > h2 {
+    font-size: 15px;
+}
+
+/*START header COVER*/
+body > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;      
+    background-color: yellow;      
+}
+
+body > header > h1 {
+    text-transform: uppercase;    
+}
+
+body > header > nav {
+    width: 100%;
+    background-color: var(--gray);    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body > header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;   
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */ 
+}
+
+body > header a {
+    color: white;
+    text-decoration:none;
+}
+/*END header COVER*/
+
+/*START main*/
+main {
+    display: flex;
+    flex-direction: column;    
+}
+
+/*START main HEADER*/
+main > header {        
+    background-image: url("images/talking_heads-speaking_in_tongues.png");    
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+main > header > section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;         
+    background-color: rgba(0, 0, 0, .8);   
+    margin-left: 8%;
+    margin-right: 8%;
+    height: 24vh;
+}
+
+main > header > section > h1 {
+    order: 1; 
+    width:75%; 
+    color: var(--yellow);
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+main > header > section > h2 {
+    order: 1; 
+    width:75%; 
+    color: white;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+main > header > section > h3 {
+    order: 1; 
+    width:75%;    
+    color: #afafaf;
+    margin-left: 20px;
+}
+main > header > section > img {
+    order: 4; 
+    width: 20vh;
+    margin-top: 2vh;    
+}
+/*END main HEADER*/
+
+
+/*START main ASIDE (About the SONG)*/
+main > article {    
+    margin: 10%;
+    margin-top: 10px;    
+}
+
+main > article > aside {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: var(--gray);
+    color: white;
+    height: 100%;    
+    
+}
+
+main > article > aside > h2 {
+    text-transform: uppercase;    
+    background-color:var(--yellow);
+    text-align: left;    
+    color: black;
+    margin: 0;
+    padding: 20px;        
+}
+
+main > article > aside > p {    
+    padding: 0px 20px;            
+}
+
+main > article > aside > section > iframe {        
+    width: 100%;    
+}
+
+main > article > aside > section {
+    margin: 20px;    
+    border-top: solid 5px var(--yellow);        
+}
+
+
+main > article > aside > blockquote > sup > a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+/*END main ASIDE (About the SONG)*/
+
+/*START main SECTION (Lyrics SONG)*/
+main > article > section {
+    
+    width: 70%;     
+}
+
+main > article > section:nth-child(odd) {
+    margin-left: 20px;    
+}
+
+main > article > section > h2 {
+    text-transform: uppercase;
+    display: table; 
+    padding:5px;
+    background-color:var(--yellow);
+    text-align: center;    
+}
+
+main > article > section > h2 {
+    width: 25%;    
+    padding: 20px;
+}
+
+main > article > section > p {
+    border-left: solid 5px var(--yellow);    
+    padding: 20px;
+}
+/*END main SECTION (Lyrics SONG)*/
+
+/*START main FOOTER (Credits and reference)*/
+main > article > footer {    
+    clear: both;
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 100%;
+    font-size: 10px;
+    border-top: solid 5px var(--yellow);    
+}
+
+main > article > footer section > cite > a   {    
+    background-color: var(--yellow);
+    color: none;
+    text-decoration:none;
+}
+/*END main FOOTER (Credits and reference)*/
+/*END main*/
+
+/*START main viewport variation*/
+/*START main HEADER viewport variation*/
+@media (max-width: 1200px) {
+    
+    /*remove margins to give a better experience and fit in the hole screen*/
+    body {
+        margin: 0;  
+        padding: 0;      
+        width: 100%;
+    }
+
+    /*change diretction fo cover and titles display to fit in the screen a give a better experience*/
+    main > header > section {
+        flex-flow: row wrap;
+        justify-content: center;        
+        text-align: center;
+        height: auto;
+    }
+    
+    /* give margin to the album cover to be visually aligned*/
+    main > header > section > img {
+        margin-bottom: 20px;
+    }
+}
+/*END main HEADER viewport variation*/
+
+/*START main BODY/FOOTER viewport variation*/
+@media (max-width: 580px) {   
+    
+    /*remove floar display to flex to give a better experience and fit in the viewport*/
+    main > article {
+        display: flex;
+        flex-flow: column wrap;  
+        justify-content: center;   
+        align-items: center;  
+        margin: 20px; 
+    }
+
+    /*giver order to all parts of the flex-box to give a good experience and information flow*/
+    main > article > section {    
+        order:1;    
+        width: 100%;
+        height: auto;          
+    }
+
+    main > article > aside {   
+        order:2;         
+        width: 100%;
+        height: auto;  
+     
+    }
+
+    /*setting clear none because of flex-box*/
+    main > article > footer {
+        clear: none;
+        order: 3;
+    }
+}
+/*END main BODY/FOOTER viewport variation*/
+/*END main viewport variation*/
+
+
