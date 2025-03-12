@@ -40,7 +40,8 @@ Directions
 /*set border recognition inside the viewport and remove all margins of the pages*/
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*
@@ -52,9 +53,9 @@ Directions
     x = 14.29
 */
 :root {
-    --sq1size: calc(14.29vh); 
-    --sq2size: calc(14.29vh * 2); 
-    --sq3size: calc(14.29vh * 4);
+    --sq1size: calc(100vmin/7); 
+    --sq2size: calc(100vmin/7 * 2); 
+    --sq3size: calc(100vmin/7 * 4);
 }
 
 /* set squares colors, borders, size and margins */
