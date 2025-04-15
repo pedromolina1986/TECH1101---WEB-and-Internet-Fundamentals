@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Inventory Management Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Car Inventory Management Application</h1>
+
+    <div class="container">
+
+        <h2>Add New Car</h2>
+
+        <!-- Form for entering new car information -->
+        <form id="carForm">
+            <label for="make">Make:</label>
+            <input type="text" id="make" required>
+            
+            <label for="model">Model:</label>
+            <input type="text" id="model" required>
+            
+            <label for="year">Year:</label>
+            <input type="number" id="year" required>
+            
+            <label for="price">Price ($):</label>
+            <input type="number" id="price" required>
+            
+            <button type="submit" id="addCarButton">Add Car</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Inventory</h2>
+
+        <!-- Button to refresh the carList -->
+        <button type="button" id="refreshInventoryButton">Refresh Inventory</button>
+
+        <ul id="carList">
+            <!-- List of cars in the inventory. Will be populated when the button is clicked -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
